@@ -16,13 +16,13 @@ public record Address
         ZipCode = zipCode;
     }
 
-    public string Street { get; private set; }
+    public string Street { get; }
 
-    public string City { get; private set; }
+    public string City { get; }
 
-    public string Country { get; private set; }
+    public string Country { get; }
 
-    public string? ZipCode { get; private set; }
+    public string? ZipCode { get; }
 
 
     public static Result<Address> Create(string street, string city, string country, string? zipCode = null)
